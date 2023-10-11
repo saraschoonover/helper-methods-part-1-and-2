@@ -6,12 +6,12 @@
 
 <%= form_with(url: movies_path(@movie), data: { turbo: false }) do %>
   <div>
-    <%= label_tag :title %>
+    <%= label_tag "movie[title]", "Title" %>
 
     <%= text_field_tag "movie[title]", @movie.title  %>
   </div>
   <div>
-    <%= label_tag :description %>
+    <%= label_tag "movie[description]", "Description" %>
 
     <%= text_area_tag "movie[description]", @movie.description, { rows: 3 } %>
   </div>
